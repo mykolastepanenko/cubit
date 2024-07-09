@@ -1,4 +1,4 @@
-<section class="section">
+<section class="section" id="about">
     <div class="container">
         <h2 class="title">ПРО НАС</h2>
         <p class="description">cubit – це інноваційна школа програмування,

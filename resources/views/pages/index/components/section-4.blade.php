@@ -1,4 +1,4 @@
-<section class="section">
+<section class="section" id="contacts">
     <div class="container">
         <div class="d-flex flex-row">
             <div>
@@ -14,9 +14,9 @@
             </div>
             <div class="social-media-wrp">
                 <ul class="d-flex flex-col social-media">
-                    <li><a href="">instagram</a></li>
-                    <li><a href="">telegram</a></li>
-                    <li><a href="">phone</a></li>
+                    <li><a href="#">instagram</a></li>
+                    <li><a href="#">telegram</a></li>
+                    <li><a href="#">phone</a></li>
                 </ul>
             </div>
         </div>

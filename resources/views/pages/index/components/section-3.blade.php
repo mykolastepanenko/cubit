@@ -2,7 +2,7 @@
 $sectionComponentsPath = 'pages/index/components/section-3/';
 @endphp
 
-<section class="section">
+<section class="section" id="courses">
     <div class="container">
         <h2 class="title">КУРСИ</h2>
         <div class="courses">

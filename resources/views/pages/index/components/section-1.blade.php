@@ -11,6 +11,6 @@
         <p class="description">
             Запишіться на пробний урок – написавши нашому менеджеру в будь-якому зручному месенджері
         </p>
-        <a href="#" class="button">ЗАПИСАТИСЬ</a>
+        <a href="#contacts" class="button">ЗАПИСАТИСЬ</a>
     </div>
 </section>

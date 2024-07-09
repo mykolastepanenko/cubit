@@ -8,7 +8,7 @@
             <p class="description">Учні ознайомляться з веб-технологіями, такими як HTML, CSS та JavaScript, і
                 вивчатимуть, як створювати естетично привабливі та функціональні користувацькі інтерфейси.</p>
         </div>
-        <a href="#" class="button">ЗАПИСАТИСЬ</a>
+        <a href="#contacts" class="button">ЗАПИСАТИСЬ</a>
     </div>
     <div class="course-img-wrp">
         <img class="course-img" src="{{Vite::asset('resources/img/frontend_course.png')}}" alt="Курс Python">

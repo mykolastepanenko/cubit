@@ -9,7 +9,7 @@
                 розробку програм та навчаться Алгоритмічному мисленню. Курс також враховує можливість спільної роботи та
                 обміну досвідом, надаючи учням можливість вдосконалювати свої навички у командній роботі.</p>
         </div>
-        <a href="#" class="button">ЗАПИСАТИСЬ</a>
+        <a href="#contacts" class="button">ЗАПИСАТИСЬ</a>
     </div>
     <div class="course-img-wrp">
         <img class="course-img" src="{{Vite::asset('resources/img/python_course.png')}}" alt="Курс Python">

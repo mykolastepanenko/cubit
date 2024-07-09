@@ -11,7 +11,7 @@
                 але й розвинути творчість. На завершення курсу, учасники будуть готові до самостійного створення своїх
                 проектів на платформі Scratch та будуть мати засвоєні основні принципи програмування.</p>
         </div>
-        <a href="#" class="button">ЗАПИСАТИСЬ</a>
+        <a href="#contacts" class="button">ЗАПИСАТИСЬ</a>
     </div>
     <div class="course-img-wrp">
         <img class="course-img" src="{{Vite::asset('resources/img/scratch_course.png')}}" alt="Курс Scratch">
