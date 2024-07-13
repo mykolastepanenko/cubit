@@ -249,7 +249,7 @@ button, .button {
     justify-content: flex-end;
 }
 
-.course:nth-child(2) .course-img-wrp {
+.course:nth-child(2n) .course-img-wrp {
     justify-content: flex-start;
 }
 
@@ -268,17 +268,18 @@ button, .button {
 /* -------------- SECTION 4 -------------- */
 
 .section:nth-child(4) {
-    min-height: 125vh;
+    min-height: 800px;
     background-image: url("../img/footer-logo.png");
     background-repeat: no-repeat;
-    background-position: right 20% bottom 20%;
+    background-position: right 20% bottom 30%;
     position: relative;
     overflow: hidden;
 }
 
 .section:nth-child(4) .description {
     max-width: 725px;
-    font-size: 3.625rem;
+    /*font-size: 3.625rem;*/
+    font-size: 3.5vw;
     font-weight: 600;
     text-transform: uppercase;
     margin-bottom: 5rem;
