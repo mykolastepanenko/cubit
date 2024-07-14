@@ -1,6 +1,6 @@
 <section class="section" id="contacts">
     <div class="container">
-        <div class="d-flex flex-row section-4-content-wrp">
+        <div class="section-4-content-wrp">
             <div>
                 <p class="description">
                     Залиште ваш номер телефону і ми вам зателефонуємо

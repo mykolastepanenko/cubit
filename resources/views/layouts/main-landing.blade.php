@@ -12,7 +12,7 @@
     @vite(['resources/css/app.css',])
 </head>
 <body>
-@include('pages.index.components.header')
+{{--@include('pages.index.components.header')--}}
 <div>
     @yield('content')
 </div>
