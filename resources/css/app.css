@@ -76,6 +76,14 @@ p {
     line-height: 1.5;
 }
 
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.d-none {
+    display: none;
+}
+
 .d-flex {
     display: flex;
 }
@@ -106,11 +114,23 @@ p {
     padding: 15px 0;
     font-family: "Inter", sans-serif;
     font-weight: 600;
-    position: absolute;
+    position: fixed;
+    z-index: 99999;
+}
+
+.header-background {
+    background-color: var(--black);
+}
+
+@media screen and (max-width: 1024px) {
+    .header {
+        background-color: var(--black);
+    }
 }
 
 .header-wrp {
     display: flex;
+    align-items: center;
     justify-content: space-between;
 }
 
@@ -141,9 +161,39 @@ a {
     gap: 50px;
 }
 
+@media screen and (max-width: 1024px) {
+    .header .content {
+        display: none;
+    }
+}
+
 .header .social-media-wrp {
     gap: 25px;
 }
+
+/* --- Mobile header menu --- */
+.header-collapse-mobile-wrp {
+    width: 100%;
+    background-color: var(--black);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 72.85px;
+}
+
+.header-collapse-mobile {
+    min-height: calc(100vh - 72.85px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.mobile-navigation .list-item {
+    text-transform: uppercase;
+    padding: 1.5rem 0.75rem;
+    border-bottom: 1px solid #8B8986;
+}
+/* --- End mobile header menu --- */
 
 button, .button {
     cursor: pointer;
@@ -544,13 +594,14 @@ button, .button {
     left: 0;
     right: 0;
     bottom: 0;
+    overflow: hidden;
 }
 
 .footer-effect {
     text-align: center;
     font-family: "Oswald", sans-serif;
     font-weight: 700;
-    font-size: 14.5vw;
+    font-size: 14vw;
     text-transform: uppercase;
     transform: translateY(10px);
     line-height: 1;
@@ -558,6 +609,20 @@ button, .button {
 
 @media screen and (max-width: 1024px) {
     .footer-effect {
-        transform: translateY(0px);
+        transform: translateY(5px);
+    }
+}
+
+/* --- Burger icon --- */
+.burger-icon {
+    width: 24px;
+    height: 24px;
+    background-color: red;
+    display: none;
+}
+
+@media screen and (max-width: 1024px) {
+    .burger-icon {
+        display: initial;
     }
 }
