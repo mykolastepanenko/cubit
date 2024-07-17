@@ -20,9 +20,9 @@
                 </div>
                 <div class="social-media">
                     <ul class="d-flex flex-row social-media-wrp">
-                        <li><a href="#">instagram</a></li>
-                        <li><a href="#">telegram</a></li>
-                        <li><a href="#">phone</a></li>
+                        <li class="social-media-list-item"><a href="#"><img class="social-icon" src="{{Vite::asset('resources/img/instagram.png')}}" alt="Instagram"></a></li>
+                        <li class="social-media-list-item"><a href="#"><img class="social-icon" src="{{Vite::asset('resources/img/telegram.png')}}" alt="Telegram"></a></li>
+                        <li class="social-media-list-item"><a href="#"><img class="social-icon" src="{{Vite::asset('resources/img/phone.png')}}" alt="Whatsapp"></a></li>
                     </ul>
                 </div>
             </div>
@@ -39,10 +39,10 @@
                     </ul>
                 </nav>
                 <div class="social-media">
-                    <ul>
-                        <li><a href="#">Instagram</a></li>
-                        <li><a href="#">Telegram</a></li>
-                        <li><a href="#">Phone</a></li>
+                    <ul class="social-media-wrp">
+                        <li class="social-media-list-item"><a href="#"><img class="social-icon" src="{{Vite::asset('resources/img/instagram.png')}}" alt="Instagram"></a></li>
+                        <li class="social-media-list-item"><a href="#"><img class="social-icon" src="{{Vite::asset('resources/img/telegram.png')}}" alt="Telegram"></a></li>
+                        <li class="social-media-list-item"><a href="#"><img class="social-icon" src="{{Vite::asset('resources/img/phone.png')}}" alt="Whatsapp"></a></li>
                     </ul>
                 </div>
             </div>

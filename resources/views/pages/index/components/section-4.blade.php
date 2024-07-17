@@ -5,7 +5,7 @@
                 <p class="description">
                     Залиште ваш номер телефону і ми вам зателефонуємо
                 </p>
-                <form>
+                <form class="form">
                     <label class="label">
                         <input type="text" class="input" placeholder="+(38)-xxx-xxxx">
                         <button class="submit-button" type="submit">Відправити</button>
@@ -14,9 +14,9 @@
             </div>
             <div class="social-media-wrp">
                 <ul class="d-flex flex-col social-media">
-                    <li><a href="#">instagram</a></li>
-                    <li><a href="#">telegram</a></li>
-                    <li><a href="#">phone</a></li>
+                    <li><a href="#"><img class="social-icon" src="{{Vite::asset('resources/img/instagram.png')}}" alt="Instagram"></a></li>
+                    <li><a href="#"><img class="social-icon" src="{{Vite::asset('resources/img/telegram.png')}}" alt="Telegram"></a></li>
+                    <li><a href="#"><img class="social-icon" src="{{Vite::asset('resources/img/phone.png')}}" alt="Whatsapp"></a></li>
                 </ul>
             </div>
         </div>
