@@ -235,7 +235,8 @@ button, .button {
 
 @media screen and (max-width: 1024px) {
     .section:nth-child(1) .description {
-        font-size: max(4.025vw, 1rem);
+        /*font-size: max(4.025vw, 1rem);*/
+        font-size: 1rem;
     }
 }
 
@@ -289,7 +290,8 @@ button, .button {
 
 @media screen and (max-width: 1024px) {
     .section:nth-child(2) .description {
-        font-size: max(5vw, 1.25rem);
+        /*font-size: max(5vw, 1.25rem);*/
+        font-size: 1.25rem;
         line-height: 1.15;
         font-weight: 400;
         transform: none;
@@ -298,6 +300,11 @@ button, .button {
 
 .section:nth-child(2) {
     padding-bottom: calc(120px - 3.625rem - 1rem - 0.25rem);
+}
+@media screen and (max-width: 1024px) {
+    .section:nth-child(2) {
+        padding-bottom: 5rem;
+    }
 }
 
 /* -------------- END SECTION 2 -------------- */

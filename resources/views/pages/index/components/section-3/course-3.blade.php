@@ -12,6 +12,6 @@
         <a href="#contacts" class="button">ЗАПИСАТИСЬ</a>
     </div>
     <div class="course-img-wrp">
-        <img class="course-img" src="{{Vite::asset('resources/img/web_design_course.png')}}" alt="Курс Scratch">
+        <img class="course-img" src="{{Vite::asset('resources/img/web_design_course.png')}}" alt="Курс web design">
     </div>
 </div>

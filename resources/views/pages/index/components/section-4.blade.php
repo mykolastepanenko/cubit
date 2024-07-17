@@ -7,7 +7,7 @@
                 </p>
                 <form>
                     <label class="label">
-                        <input type="text" class="input" placeholder="Введіть ваш номер телефону">
+                        <input type="text" class="input" placeholder="+(38)-xxx-xxxx">
                         <button class="submit-button" type="submit">Відправити</button>
                     </label>
                 </form>
