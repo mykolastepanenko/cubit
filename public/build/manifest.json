@@ -8,9 +8,41 @@
     "file": "assets/footer-logo-8285fce5.png",
     "src": "resources/img/footer-logo.png"
   },
+  "resources/img/frontend_course.png": {
+    "file": "assets/frontend_course-d8ea43a2.png",
+    "src": "resources/img/frontend_course.png"
+  },
+  "resources/img/header-logo.png": {
+    "file": "assets/header-logo-6ae850c2.png",
+    "src": "resources/img/header-logo.png"
+  },
+  "resources/img/instagram.png": {
+    "file": "assets/instagram-6e2b9bec.png",
+    "src": "resources/img/instagram.png"
+  },
+  "resources/img/phone.png": {
+    "file": "assets/phone-2073cea1.png",
+    "src": "resources/img/phone.png"
+  },
+  "resources/img/python_course.png": {
+    "file": "assets/python_course-1dc81d30.png",
+    "src": "resources/img/python_course.png"
+  },
+  "resources/img/scratch_course.png": {
+    "file": "assets/scratch_course-0f25f5f3.png",
+    "src": "resources/img/scratch_course.png"
+  },
   "resources/img/section-1-effect.png": {
     "file": "assets/section-1-effect-d004a044.png",
     "src": "resources/img/section-1-effect.png"
+  },
+  "resources/img/telegram.png": {
+    "file": "assets/telegram-14731db1.png",
+    "src": "resources/img/telegram.png"
+  },
+  "resources/img/web_design_course.png": {
+    "file": "assets/web_design_course-66f7f161.png",
+    "src": "resources/img/web_design_course.png"
   },
   "resources/js/app.js": {
     "file": "assets/app-3b7b0d4d.js",
