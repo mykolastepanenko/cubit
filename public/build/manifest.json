@@ -1,0 +1,20 @@
+{
+  "resources/css/app.css": {
+    "file": "assets/app-5c3d0aa3.css",
+    "isEntry": true,
+    "src": "resources/css/app.css"
+  },
+  "resources/img/footer-logo.png": {
+    "file": "assets/footer-logo-8285fce5.png",
+    "src": "resources/img/footer-logo.png"
+  },
+  "resources/img/section-1-effect.png": {
+    "file": "assets/section-1-effect-d004a044.png",
+    "src": "resources/img/section-1-effect.png"
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-3b7b0d4d.js",
+    "isEntry": true,
+    "src": "resources/js/app.js"
+  }
+}
