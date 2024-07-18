@@ -12,12 +12,17 @@
     @include("{$componentsPath}.section-4")
 
     <div class="modal d-none">
-        <button class="close-button">
-            <span></span>
-            <span></span>
-        </button>
-        <div class="modal-description-wrp">
-            <div class="modal-description">Дякуємо, що звернулись до нас! Найближчим часом з вами зв’яжеться менеджер
+        <div id="loader-wrp" class="modal-description-wrp">
+            <span class="loader"></span>
+        </div>
+        <div class="real-modal d-none">
+            <button class="close-button">
+                <span></span>
+                <span></span>
+            </button>
+            <div class="modal-description-wrp">
+                <div id="modal-description" class="modal-description">Дякуємо, що звернулись до нас! Найближчим часом з вами зв’яжеться менеджер
+                </div>
             </div>
         </div>
     </div>

@@ -7,7 +7,7 @@
                 </p>
                 <form class="form">
                     <label class="label">
-                        <input type="text" class="input" placeholder="+380-xx-xxx-xx-xx">
+                        <input id="phone" type="text" class="input" placeholder="+380-xx-xxx-xx-xx">
                         <button class="submit-button" type="submit">Відправити</button>
                     </label>
                 </form>
