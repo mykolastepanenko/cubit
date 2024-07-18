@@ -19,3 +19,22 @@ for (let link of links) {
         mobileHeader.classList.add("d-none");
     }
 }
+
+/* --- close modal --- */
+const modal = document.querySelector(".modal");
+const closeModalButton = document.querySelector(".modal .close-button");
+
+closeModalButton.onclick = () => {
+    body.classList.remove("overflow-hidden");
+    modal.classList.add("d-none");
+}
+
+
+/* --- --- */
+document.addEventListener('scroll', function() {
+    if (window.scrollY > 100) {
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
+    }
+});

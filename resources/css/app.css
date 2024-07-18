@@ -19,15 +19,25 @@ html {
 h1 {
     font-family: "Oswald", sans-serif;
     font-weight: 700;
-    /*font-size: 10rem;*/
-    /*font-size: 12vw;*/
-    font-size: max(2.5rem, 12vw);
+    font-size: 14.3rem;
     text-transform: uppercase;
     margin: 0;
     padding: 0;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1919px) {
+    h1 {
+        font-size: max(2.5rem, 11.95vw);
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    h1 {
+        font-size: 11.5vw;
+    }
+}
+
+@media screen and (max-width: 1280px) {
     h1 {
         margin-bottom: 3rem;
     }
@@ -63,6 +73,18 @@ h1 .row-2 {
     justify-content: flex-end;
 }
 
+/*@media screen and (max-width: 1919px) {*/
+/*    h1 .row-2 {*/
+/*        font-size: 2vw;*/
+/*    }*/
+/*}*/
+
+@media screen and (max-width: 1280px) {
+    h1 .row-2 {
+        font-size: 3vw;
+    }
+}
+
 @media screen and (max-width: 1024px) {
     h1 .row-2 {
         /*font-size: 1rem;*/
@@ -81,7 +103,7 @@ p {
 }
 
 .d-none {
-    display: none;
+    display: none !important;
 }
 
 .d-flex {
@@ -97,10 +119,16 @@ p {
 }
 
 .container {
-    width: 100%;
+    /*width: 100%;*/
+    max-width: 1840px;
     margin: 0 auto;
-    /*padding: 0 120px; !*TODO: figma *!*/
     padding: 0 60px;
+}
+
+@media screen and (max-width: 1540px) {
+    .container {
+        padding: 0 60px;
+    }
 }
 
 @media screen and (max-width: 1024px) {
@@ -115,7 +143,11 @@ p {
     font-family: "Inter", sans-serif;
     font-weight: 600;
     position: fixed;
-    z-index: 99999;
+    z-index: 2;
+}
+
+.header.scrolled {
+    background-color: var(--black);
 }
 
 .header-background {
@@ -287,7 +319,7 @@ button, .button {
 .section:not(.section:first-child) .title {
     font-family: "Oswald", sans-serif;
     text-transform: uppercase;
-    font-size: 21vw;
+    font-size: 26.25rem;
     font-weight: 700;
     margin: 0;
     padding: 0;
@@ -300,6 +332,20 @@ button, .button {
 .section:nth-child(2) .title {
     -webkit-text-stroke: 4px var(--black);
     text-indent: -1.5rem;
+}
+
+@media screen and (max-width: 1919px) {
+    .section:nth-child(2) .title,
+    .section:not(.section:first-child) .title {
+        font-size: 21vw;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .section:nth-child(2) .title,
+    .section:not(.section:first-child) .title {
+        /*font-size: 11.5vw;*/
+    }
 }
 
 @media screen and (max-width: 1540px) {
@@ -511,9 +557,14 @@ button, .button {
 
 @media screen and (max-width: 1024px) {
     .section:nth-child(4) {
-        min-height: initial;
         overflow: initial;
         background: var(--blue);
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .section:nth-child(4) {
+        min-height: initial;
     }
 }
 
@@ -550,6 +601,12 @@ button, .button {
 @media screen and (max-width: 1024px) {
     .section:nth-child(4) .label {
         width: 100%;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .section:nth-child(4) .label {
+        padding: 5px;
     }
 }
 
@@ -728,4 +785,68 @@ button, .button {
     .burger-icon.active span:nth-child(3) {
         transform: rotate(-45deg);
     }
+}
+
+.modal {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--black);
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+.modal-description {
+    max-width: 570px;
+    display: block;
+    font-size: 2rem;
+    font-weight: 300;
+    text-align: center;
+    text-transform: uppercase;
+    border-bottom: 1px solid #8B8986;
+    padding-bottom: 1rem;
+    color: var(--white);
+}
+
+@media screen and (max-width: 1024px) {
+    .modal-description {
+        font-size: 1.25rem;
+    }
+
+    .modal-description-wrp {
+        padding: 0 15px;
+    }
+}
+
+.modal .close-button {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    transition: opacity ease 0.5s;
+    border: none;
+    background-color: transparent;
+}
+
+.modal .close-button span {
+    content: '';
+    top: 11px;
+    position: absolute;
+    display: block;
+    width: 24px;
+    height: 3px;
+    background: var(--white);
+}
+
+.modal .close-button span:nth-child(1) {
+    transform: rotate(45deg);
+}
+
+.modal .close-button span:nth-child(2) {
+    transform: rotate(-45deg);
 }
