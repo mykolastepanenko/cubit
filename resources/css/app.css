@@ -547,7 +547,7 @@ button, .button {
 /* -------------- SECTION 4 -------------- */
 
 .section:nth-child(4) {
-    min-height: 800px;
+    min-height: 50vw;
     background-image: url("../img/footer-logo.png");
     background-repeat: no-repeat;
     background-position: right 20% bottom 30%;
@@ -555,10 +555,28 @@ button, .button {
     overflow: hidden;
 }
 
+@media screen and (max-width: 1280px) {
+    .section:nth-child(4) {
+        min-height: 800px;
+    }
+}
+
 @media screen and (max-width: 1024px) {
     .section:nth-child(4) {
         overflow: initial;
         background: var(--blue);
+    }
+}
+
+@media screen and (min-width: 875px) and (max-width: 1024px) {
+    .section:nth-child(4) {
+        min-height: 1100px;
+    }
+}
+
+@media screen and (min-width: 775px) and (max-width: 875px) {
+    .section:nth-child(4) {
+        min-height: 900px;
     }
 }
 
@@ -721,8 +739,14 @@ button, .button {
     font-weight: 700;
     font-size: 14vw;
     text-transform: uppercase;
-    transform: translateY(10px);
+    transform: translateY(20px);
     line-height: 1;
+}
+
+@media screen and (max-width: 1280px) {
+    .footer-effect {
+        transform: translateY(10px);
+    }
 }
 
 @media screen and (max-width: 1024px) {

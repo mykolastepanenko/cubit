@@ -19,6 +19,8 @@ class RegisterRequest extends FormRequest
             'phone' => [
                 'required',
                 'string',
+                'min:17',
+                'max:17',
             ],
         ];
     }
