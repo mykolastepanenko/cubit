@@ -14,9 +14,9 @@
             </div>
             <div class="social-media-wrp">
                 <ul class="d-flex flex-col social-media">
-                    <li><a href="#"><img class="social-icon" src="{{Vite::asset('resources/img/instagram.png')}}" alt="Instagram"></a></li>
-                    <li><a href="#"><img class="social-icon" src="{{Vite::asset('resources/img/telegram.png')}}" alt="Telegram"></a></li>
-                    <li><a href="#"><img class="social-icon" src="{{Vite::asset('resources/img/phone.png')}}" alt="Whatsapp"></a></li>
+                    <li><a href="https://www.instagram.com/cubit_school_ukraine/"><img class="social-icon" src="{{Vite::asset('resources/img/instagram.png')}}" alt="Instagram"></a></li>
+                    <li><a href="https://t.me/cubit_school"><img class="social-icon" src="{{Vite::asset('resources/img/telegram.png')}}" alt="Telegram"></a></li>
+                    <li><a href="https://www.facebook.com/profile.php?id=61559397283649"><img class="social-icon" src="{{Vite::asset('resources/img/facebook.png')}}" alt="Facebook"></a></li>
                 </ul>
             </div>
         </div>
