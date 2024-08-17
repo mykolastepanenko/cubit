@@ -1,5 +1,6 @@
 <?php
 
+use App\Events\UserRegistered;
 use App\Http\Requests\RegisterRequest;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -21,7 +22,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::post('register', function(RegisterRequest $request) {
-    User::create(['phone' => $request->phone]);
+    $user = User::create(['phone' => $request->phone]);
+    event(new UserRegistered($user));
 
     return response()->json(['status' => 'ok', 'message' => 'Ви успішно залишили заявку!']);
 });

@@ -69,7 +69,7 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    'timezone' => 'Europe/Kyiv',
 
     /*
     |--------------------------------------------------------------------------
@@ -212,4 +212,9 @@ return [
         // 'ExampleClass' => App\Example\ExampleClass::class,
     ])->toArray(),
 
+    'telegram_bot' => [
+        'api_key' => env('TELEGRAM_BOT_API_KEY'),
+        'username' => env('TELEGRAM_BOT_USERNAME'),
+        'receivers' => explode(',', env('TELEGRAM_BOT_RECEIVERS')),
+    ],
 ];
