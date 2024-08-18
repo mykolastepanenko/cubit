@@ -74,7 +74,12 @@ class TelegramBotCommand extends Command
 
                     $this->telegramBotService->sendMessage([
                         'chat_id' => $update->callback_query->from->id,
-                        'text' => 'Користувача успішно підтверджено!',
+                        'text' => "Користувача успішно підтверджено!\n{$data->value}",
+                    ]);
+                } else {
+                    $this->telegramBotService->sendMessage([
+                        'chat_id' => $update->callback_query->from->id,
+                        'text' => "Користувача вже підтвердили раніше!\n{$data->value}\nКористувача підтвердив @{$update->callback_query->from->username}",
                     ]);
                 }
             }
