@@ -22,8 +22,6 @@ class TelegramWebhookController extends Controller
         Log::info(json_encode($request->all()));
 
         $updates = [$request->all()];
-
-        $updates = $this->telegramBotService->getUpdates();
         if (count($updates) === 0) {
             return;
         }
