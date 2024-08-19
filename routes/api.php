@@ -27,3 +27,9 @@ Route::post('register', function(RegisterRequest $request) {
 
     return response()->json(['status' => 'ok', 'message' => 'Ви успішно залишили заявку!']);
 });
+
+Route::post('/webhook/telegram', function (Request $request) {
+    \Illuminate\Support\Facades\Log::info(json_encode($request->all()));
+
+    return response()->json(true);
+});
