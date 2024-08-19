@@ -54,7 +54,38 @@ class TelegramBotCommand extends Command
 
         $updateRecord = TelegramBotUpdate::find(1);
 
-        foreach ($updates as $update) {
+        $lastUpdate = TelegramBotUpdate::query()->latest()->first();
+        $hasNewUpdates = true;
+        $updateIndex = 0;
+        foreach ($updates as $index => $update) {
+            if (!property_exists($update, 'callback_query')) {
+                continue;
+            }
+
+            if ($update->update_id === $lastUpdate->last_update_id) {
+                if ($index === count($updates) - 1) {
+                    $hasNewUpdates = false;
+                    dump('it is old update. fake info');
+                    break;
+                }
+                dump("index={$index}");
+                $updateIndex = $index + 1;
+                dump("has old items!, index={$updateIndex}", "update_id,", $update->update_id);
+                break;
+            }
+        }
+
+        if (!$hasNewUpdates) {
+            dump("No new updates.");
+            return;
+        } else {
+            dump('all new iters');
+        }
+
+        dump("index {$updateIndex}");
+
+        for ($i = $updateIndex; $i < count($updates); $i++) {
+            $update = $updates[$i];
             if (!property_exists($update, 'callback_query')) {
                 continue;
             }
@@ -69,9 +100,6 @@ class TelegramBotCommand extends Command
                     $user->confirmed = true;
                     $user->save();
 
-                    $updateRecord->last_update_id = $update->update_id;
-                    $updateRecord->save();
-
                     $this->telegramBotService->sendMessage([
                         'chat_id' => $update->callback_query->from->id,
                         'text' => "Користувача успішно підтверджено!\n{$data->value}",
@@ -83,6 +111,9 @@ class TelegramBotCommand extends Command
                     ]);
                 }
             }
+
+            $updateRecord->last_update_id = $update->update_id;
+            $updateRecord->save();
         }
     }
 }
