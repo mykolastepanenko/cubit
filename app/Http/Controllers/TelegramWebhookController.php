@@ -56,7 +56,7 @@ class TelegramWebhookController extends Controller
                 continue;
             }
 
-            $dataJson = $update['callback_query']->data;
+            $dataJson = $update['callback_query']['data'];
             $data = json_decode($dataJson);
 
             if ($data->action === 'confirm') {
@@ -67,13 +67,13 @@ class TelegramWebhookController extends Controller
                     $user->save();
 
                     $this->telegramBotService->sendMessage([
-                        'chat_id' => $update['callback_query']->from->id,
+                        'chat_id' => $update['callback_query']['from']['id'],
                         'text' => "Користувача успішно підтверджено!\n{$data->value}",
                     ]);
                 } else {
                     $this->telegramBotService->sendMessage([
-                        'chat_id' => $update['callback_query']->from->id,
-                        'text' => "Користувача вже підтвердили раніше!\n{$data->value}\nКористувача підтвердив @{$update['callback_query']->from->username}",
+                        'chat_id' => $update['callback_query']['from']['id'],
+                        'text' => "Користувача вже підтвердили раніше!\n{$data->value}\nКористувача підтвердив @{$update['callback_query']['from']['username']}",
                     ]);
                 }
             }
