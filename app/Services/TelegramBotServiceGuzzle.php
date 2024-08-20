@@ -34,7 +34,7 @@ class TelegramBotServiceGuzzle
             return [];
         }
 
-        return $response->object()->result;
+        return $response->json()['result'];
     }
 
     /**

@@ -19,8 +19,6 @@ class TelegramWebhookController extends Controller
 
     public function webhookAction(Request $request)
     {
-        Log::info(json_encode($request->all()));
-
         $updates = [$request->all()];
         if (count($updates) === 0) {
             return;
@@ -64,6 +62,7 @@ class TelegramWebhookController extends Controller
 
                 if ((bool)$user->confirmed === false) {
                     $user->confirmed = true;
+                    $user->confirmed_by = '@' . $update['callback_query']['from']['username'];
                     $user->save();
 
                     $this->telegramBotService->sendMessage([
@@ -73,7 +72,7 @@ class TelegramWebhookController extends Controller
                 } else {
                     $this->telegramBotService->sendMessage([
                         'chat_id' => $update['callback_query']['from']['id'],
-                        'text' => "Користувача вже підтвердили раніше!\n{$data->value}\nКористувача підтвердив @{$update['callback_query']['from']['username']}",
+                        'text' => "Користувача вже підтвердили раніше!\n{$data->value}\nКористувача підтвердив {$user->confirmed_by}",
                     ]);
                 }
             }
