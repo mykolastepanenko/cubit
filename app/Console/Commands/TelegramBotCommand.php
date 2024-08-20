@@ -48,6 +48,7 @@ class TelegramBotCommand extends Command
     public function handle()
     {
         $updates = $this->telegramBotService->getUpdates();
+        Log::info(json_encode($updates));
         if (count($updates) === 0) {
             return;
         }
