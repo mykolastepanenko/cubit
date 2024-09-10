@@ -383,7 +383,7 @@ button, .button {
 }
 
 .section:nth-child(2) {
-    padding-bottom: calc(120px - 3.625rem - 1rem - 0.25rem);
+    padding-bottom: calc(170px - 3.625rem - 1rem - 0.25rem);
 }
 @media screen and (max-width: 1024px) {
     .section:nth-child(2) {
