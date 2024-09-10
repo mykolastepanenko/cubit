@@ -68,6 +68,41 @@ phoneInput.addEventListener('input', function(e) {
 
     e.target.value = formattedValue.trim();
 });
+
+phoneInput.addEventListener('change', (event) => {
+    const cursorPosition = phoneInput.selectionStart;
+    const formattedValue = formatPhone(phoneInput.value);
+
+    phoneInput.value = formattedValue;
+
+    // Keep the cursor in the correct position
+    if (cursorPosition < phoneInput.value.length) {
+        phoneInput.setSelectionRange(cursorPosition, cursorPosition);
+    }
+});
+
+function formatPhone(input) {
+    input = input.replace(/[^\d\+]/g, '');  // Remove all non-numeric characters except `+`
+    if (input.startsWith('+380')) {
+        if (input.length > 4) input = input.slice(0, 4) + '-' + input.slice(4);
+        if (input.length > 7) input = input.slice(0, 7) + '-' + input.slice(7);
+        if (input.length > 11) input = input.slice(0, 11) + '-' + input.slice(11);
+        if (input.length > 14) input = input.slice(0, 14) + '-' + input.slice(14, 16);
+    }
+    return input;
+}
+
+phoneInput.addEventListener('keydown', (event) => {
+    const input = phoneInput.value;
+    const cursorPosition = phoneInput.selectionStart;
+
+    if (event.key === 'Backspace' && cursorPosition > 0 && input[cursorPosition - 1] === '-') {
+        event.preventDefault();
+        phoneInput.value = input.slice(0, cursorPosition - 1) + input.slice(cursorPosition);
+        phoneInput.setSelectionRange(cursorPosition - 1, cursorPosition - 1);
+    }
+});
+
 /* --- end phone mask --- */
 
 /* --- form sending  --- */
