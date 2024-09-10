@@ -3,7 +3,7 @@
         <div class="section-4-content-wrp">
             <div>
                 <p class="description">
-                    Залиште ваш номер телефону і ми вам зателефонуємо
+                    Залиште ваш номер телефону і ми вам зателефонуємо або напишіть нам у будь-якій соціальній мережі
                 </p>
                 <form class="form">
                     <label class="label">
